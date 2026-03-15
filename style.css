@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*, *::before, *::after {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+html, body {
+  width: 100%; height: 100%;
+  background: #030B1A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'Press Start 2P', monospace;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+
+#app {
+  position: relative;
+  width: 424px;
+  height: 695px;
+  overflow: hidden;
+  border: 2px solid #0052FF44;
+  box-shadow: 0 0 40px #0052FF33, 0 0 80px #0052FF11;
+}
+
+canvas {
+  display: block;
+  width: 424px;
+  height: 695px;
+  image-rendering: pixelated;
+}
+
+/* TOUCH CONTROLS */
+#controls {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 24px 24px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.btn-group {
+  display: flex;
+  gap: 12px;
+  pointer-events: all;
+}
+
+.ctrl-btn {
+  pointer-events: all;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 82, 255, 0.5);
+  background: rgba(0, 20, 60, 0.6);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.08s, transform 0.08s, border-color 0.08s;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: 0 0 12px rgba(0,82,255,0.3), inset 0 0 8px rgba(0,82,255,0.1);
+}
+
+.ctrl-btn:active, .ctrl-btn.pressed {
+  background: rgba(0, 82, 255, 0.4);
+  border-color: rgba(0, 82, 255, 0.9);
+  transform: scale(0.92);
+  box-shadow: 0 0 20px rgba(0,82,255,0.6);
+}
+
+#btn-jump {
+  border-color: rgba(0, 82, 255, 0.7);
+  background: rgba(0, 30, 80, 0.7);
+}
+
+#btn-attack {
+  border-color: rgba(245, 158, 11, 0.5);
+  background: rgba(40, 20, 0, 0.7);
+  color: #F59E0B;
+  box-shadow: 0 0 12px rgba(245,158,11,0.2);
+}
+
+#btn-attack:active, #btn-attack.pressed {
+  background: rgba(245, 158, 11, 0.3);
+  border-color: rgba(245, 158, 11, 0.9);
+  box-shadow: 0 0 20px rgba(245,158,11,0.5);
+}
+
+.btn-label {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 6px;
+  color: rgba(255,255,255,0.4);
+  white-space: nowrap;
+}
+
+.ctrl-btn {
+  position: relative;
+}
+
+/* Share button overlay */
+#share-btn {
+  display: none;
+  position: absolute;
+  bottom: 170px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #0052FF, #0038CC);
+  border: 2px solid #60A5FA;
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  cursor: pointer;
+  z-index: 20;
+  pointer-events: all;
+  box-shadow: 0 0 24px rgba(0,82,255,0.5);
+  white-space: nowrap;
+  transition: transform 0.1s;
+}
+#share-btn:hover { transform: translateX(-50%) scale(1.05); }
+#share-btn:active { transform: translateX(-50%) scale(0.97); }
+
+/* Add app button */
+#add-btn {
+  display: none;
+  position: absolute;
+  bottom: 230px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 20px;
+  background: rgba(0,82,255,0.15);
+  border: 1px solid rgba(0,82,255,0.4);
+  border-radius: 8px;
+  color: rgba(255,255,255,0.7);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 7px;
+  cursor: pointer;
+  z-index: 20;
+  pointer-events: all;
+  white-space: nowrap;
+}
