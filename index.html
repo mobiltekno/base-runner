@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>BASE RUNNER - Crypto Edition</title>
+  <meta name="description" content="Defend the Base Chain! A Farcaster brawler with ETH, BTC and Base atmosphere."/>
+  <!-- Farcaster Mini App Metadata -->
+  <meta name="fc:miniapp" content='{"version":"1","imageUrl":"https://base-runner.netlify.app/preview.png","button":{"title":"🎮 Play BASE RUNNER","action":{"type":"launch_frame","name":"BASE RUNNER","url":"https://base-runner.netlify.app","splashImageUrl":"https://base-runner.netlify.app/icon.png","splashBackgroundColor":"#030B1A"}}}' />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <canvas id="canvas" width="424" height="695"></canvas>
+  <div id="controls">
+    <button class="ctrl-btn" id="btn-jump">▲<span class="lbl">JUMP</span></button>
+    <button class="ctrl-btn" id="btn-attack">⚡<span class="lbl">ATTACK</span></button>
+  </div>
+  <button id="share-btn">🟦 SHARE ON FARCASTER</button>
+  <button id="add-btn">➕ ADD MINI APP</button>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
