@@ -6,7 +6,12 @@
   "imageUrl": "https://base-runner.netlify.app/preview.png",
   "buttonTitle": "🎮 Play BASE RUNNER",
   "splashImageUrl": "https://base-runner.netlify.app/icon.png",
-  "splashBackgroundColor": "#030B1A",
+  "splashBackgroundColor": "#020912",
+  "accountAssociation": {
+    "header": "eyJmaWQiOjI4MzcyNiwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweEY2NTYxOURDRUFGRUMyNjAyN0ExOGZCOUVEYjhjNkIwRDhmOEM2RTUifQ",
+    "payload": "eyJkb21haW4iOiJiYXNlLXJ1bm5lci5uZXRsaWZ5LmFwcCJ9",
+    "signature": "EvCnuEDi791XDZfb5Bg8ikDiJhP07nsPWoqidTt4UzxArHx14fE68Bd9jCa0XEcJaT/IVn9u8jMwKhV8uTFIgRs="
+  },
   "category": "games",
   "description": "Defend the Base chain from Gas Goblins, Rug Bots and Bridge Trolls! A crypto-themed pixel art brawler for Farcaster.",
   "longDescription": "BASE RUNNER is a Farcaster Mini App game with intense Crypto visuals. Defend the Base blockchain from waves of crypto villains. Features ETH, BTC, and Farcaster background effects. Share your score on Farcaster after each run!",
